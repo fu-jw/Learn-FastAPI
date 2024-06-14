@@ -5,6 +5,7 @@ from apps.app02 import app02
 from apps.app03 import app03
 from apps.app04 import app04
 from apps.app05 import app05
+from apps.app06 import app06
 
 
 app = FastAPI()
@@ -13,6 +14,7 @@ app.include_router(app02, tags=["请求与响应-查询参数"])
 app.include_router(app03, tags=["请求与响应-请求体数据"])
 app.include_router(app04, tags=["请求与响应-Form表单数据"])
 app.include_router(app05, tags=["请求与响应-文件上传"])
+app.include_router(app06, tags=["请求与响应-Request对象"])
 
 if __name__ == '__main__':
     uvicorn.run("main:app", port=8080, reload=True)
