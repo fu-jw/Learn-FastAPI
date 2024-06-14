@@ -16,7 +16,7 @@ async def get_items(kd, xl: str, gj: str = "3-5"):
 
 
 @app02.get("/jobs")
-async def get_items(kd: Union[str, None], xl: Optional[str, int] = "hh", gj: str = "3-5"):
+async def get_items(kd: Union[str, None], xl: Optional[str], gj: str = "3-5"):
     return {
         "kd": kd,
         "xl": xl,
