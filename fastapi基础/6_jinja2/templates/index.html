@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模板测试</title>
+</head>
+<body>
+<h1>数据展示：</h1>
+<h2>姓名：{{name}}</h2>
+<h2>年龄：{{age}}</h2>
+
+<h2>流行图书：{{books}}</h2>
+
+<ul>
+    <li>{{books.0}}</li>
+    <li>{{books.1}}</li>
+    <li>{{books.2}}</li>
+    <li>{{books.3}}</li>
+</ul>
+
+<ul>
+    <li>{{info.name}}</li>
+    <li>{{info.age}}</li>
+    <li>{{info.books}}</li>
+</ul>
+
+<hr>
+<h1>数据处理：</h1>
+<h2>姓名：{{name|upper}}</h2>
+<h2>π：{{pai}}</h2>
+<h2>π：{{pai|round(3)}}</h2>
+
+<hr>
+<h1>控制结构：</h1>
+{% if age>18 %}
+<h2>成年人</h2>
+{% else %}
+<h2>未成年人</h2>
+{% endif %}
+
+<ul>
+    {% for book in books %}
+    <li>{{book}}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
